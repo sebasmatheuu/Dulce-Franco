@@ -1,0 +1,107 @@
+/* index5.css */
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #f9f8ff;
+}
+
+/* Contenedor principal */
+.contenedor {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "sidebar contenido"
+    "footer footer";
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Elementos */
+.elemento {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.header {
+  grid-area: header;
+  text-align: center;
+  background: rgba(106, 17, 203, 0.6);
+}
+
+.header h1 {
+  font-size: 2.5em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.header p {
+  font-style: italic;
+  color: #dcd0ff;
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background-color: rgba(60, 20, 90, 0.4);
+}
+
+.sidebar h2 {
+  color: #c8a2ff;
+}
+
+.sidebar ul {
+  padding-left: 20px;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+/* Contenido principal */
+.contenido {
+  grid-area: contenido;
+  background-color: rgba(39, 38, 92, 0.4);
+}
+
+.contenido h2, .contenido h3 {
+  color: #a5d7ff;
+}
+
+.contenido p {
+  margin-bottom: 1em;
+}
+
+/* Footer */
+.footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: rgba(40, 20, 60, 0.5);
+}
+
+/* Imágenes */
+.foto {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor {
+    grid-template-areas:
+      "header"
+      "contenido"
+      "sidebar"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}
